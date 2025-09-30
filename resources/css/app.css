@@ -1,0 +1,425 @@
+@config "../../tailwind.config.js";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply inter min-h-screen text-neutral-700;
+    }
+
+    /* TITLE */
+    h1 {
+        @apply text-xl font-bold md:text-2xl lg:text-3xl;
+    }
+
+    h2 {
+        @apply text-lg font-bold md:text-xl lg:text-2xl;
+    }
+
+    h3 {
+        @apply font-semibold md:text-lg lg:text-xl;
+    }
+
+    h4 {
+        @apply font-medium;
+    }
+
+    /* FORM */
+    [type="text"],
+    [type="email"],
+    [type="url"],
+    [type="password"],
+    [type="number"],
+    [type="date"],
+    [type="datetime-local"],
+    [type="month"],
+    [type="search"],
+    [type="tel"],
+    [type="time"],
+    [type="week"],
+    [multiple],
+    textarea,
+    select {
+        @apply h-12 w-full rounded-md border-0 text-sm ring-1 ring-neutral-200;
+        @apply focus:outline-0 focus:ring-neutral-500;
+        @apply transition-all duration-300 ease-in-out;
+
+        /* Validation */
+        @apply valid:[&:not(:placeholder-shown)]:ring-success-500;
+        @apply invalid:[&:not(:placeholder-shown)]:ring-danger-500 [&:user-invalid]:ring-danger-500;
+
+        /* Feedback Msg */
+        @apply [&_+_.feedback-message]:invalid:[&:not(:placeholder-shown)]:block [&_+_.feedback-message]:invalid:[&:not(:placeholder-shown)]:text-danger-500 [&_+_.feedback-message]:[&:user-invalid]:block [&_+_.feedback-message]:[&:user-invalid]:text-danger-500;
+    }
+
+    textarea {
+        @apply h-auto p-2;
+    }
+
+    select {
+        @apply p-2 invalid:[&:not(:placeholder-shown)]:ring-neutral-200 [&:user-invalid]:!ring-danger-500 [&_+_.feedback-message]:invalid:[&:not(:placeholder-shown)]:hidden [&_+_.feedback-message]:[&:user-invalid]:!block;
+    }
+
+    [type="date"],
+    [type="datetime-local"],
+    [type="month"],
+    [type="time"],
+    [type="week"] {
+        @apply empty:invalid:ring-neutral-200 [&:user-invalid]:!ring-danger-500;
+    }
+
+    [type="number"]::-webkit-inner-spin-button,
+    [type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+    }
+
+    select {
+        @apply cursor-pointer;
+    }
+
+    textarea {
+        @apply block !h-auto;
+    }
+
+    label {
+        @apply mb-1 inline-block text-sm font-medium [&>.required]:text-danger-600;
+    }
+
+    /* FORM - APPEND */
+    .append {
+        @apply relative;
+    }
+
+    .append-item-left {
+        @apply absolute left-0 top-0 flex h-12 items-center justify-center text-sm;
+    }
+
+    .append-item-right {
+        @apply absolute right-0 top-0 flex h-12 items-center justify-center text-sm;
+    }
+
+    /* FORM - CUSTOM CHECKBOX */
+    label.checkbox {
+        @apply mb-0 flex w-fit cursor-pointer items-center gap-3;
+    }
+
+    [type="checkbox"] {
+        @apply cursor-pointer rounded-sm border-neutral-300 checked:!bg-primary checked:!ring-primary focus:!ring-primary/50;
+    }
+
+    /* FORM - CUSTOM RADIOBOX */
+    label.radio {
+        @apply mb-0 flex w-fit cursor-pointer items-center gap-3;
+    }
+
+    [type="radio"] {
+        @apply cursor-pointer rounded-full border-neutral-300 checked:!bg-primary checked:!ring-primary focus:!ring-primary/50;
+    }
+
+    /* FORM - CUSTOM COLOR */
+    label.color {
+        @apply mb-0 flex w-fit cursor-pointer items-center gap-3;
+    }
+
+    [type="color"] {
+        @apply h-4 w-8 appearance-none border-none bg-transparent;
+    }
+
+    [type="color"]::-webkit-color-swatch-wrapper {
+        @apply p-px;
+    }
+
+    [type="color"]::-webkit-color-swatch,
+    [type="color"]::-moz-color-swatch {
+        @apply border-none;
+    }
+
+    /* FORM - CUSTOM RANGE */
+    [type="range"] {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 100%;
+        cursor: pointer;
+        outline: none;
+        border-radius: 16px;
+        height: 2px;
+
+        @apply bg-neutral-200;
+    }
+
+    /* Thumb: webkit */
+    [type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        height: 16px;
+        width: 16px;
+        border-radius: 50%;
+        border: none;
+        transition: 0.2s ease-in-out;
+        pointer-events: all;
+        z-index: 20;
+        position: relative;
+
+        @apply bg-primary;
+    }
+
+    /* Hover, active & focus Thumb: Webkit */
+    [type="range"]::-webkit-slider-thumb:hover {
+        box-shadow: 0 0 0 10px rgb(51 204 51 / 0.2);
+    }
+    [type="range"]:active::-webkit-slider-thumb {
+        box-shadow: 0 0 0 13px rgb(51 204 51 / 0.3);
+    }
+    [type="range"]:focus::-webkit-slider-thumb {
+        box-shadow: 0 0 0 13px rgb(51 204 51 / 0.3);
+    }
+
+    /* Thumb: Firefox */
+    input[type="range"]::-moz-range-thumb {
+        height: 16px;
+        width: 16px;
+        border-radius: 50%;
+        border: none;
+        transition: 0.2s ease-in-out;
+        pointer-events: all;
+        z-index: 20;
+        position: relative;
+
+        @apply bg-primary;
+    }
+
+    /* Hover, active & focus Thumb: Firfox */
+    input[type="range"]::-moz-range-thumb:hover {
+        box-shadow: 0 0 0 10px rgb(51 204 51 / 0.2);
+    }
+    input[type="range"]:active::-moz-range-thumb {
+        box-shadow: 0 0 0 13px rgb(51 204 51 / 0.3);
+    }
+    input[type="range"]:focus::-moz-range-thumb {
+        box-shadow: 0 0 0 13px rgb(51 204 51 / 0.3);
+    }
+
+    /* FORM - MSG */
+    .error-msg {
+        @apply mt-1 text-xs text-danger-400;
+    }
+
+    .feedback-message {
+        @apply mt-1 hidden text-sm;
+    }
+
+    /* TABLE */
+    .table {
+        @apply w-full overflow-hidden;
+    }
+    .table tbody tr {
+        @apply align-middle last:[&>td]:last:rounded-br-xl first:[&>td]:last:rounded-bl-xl [&>td]:odd:bg-neutral-100;
+    }
+    .table thead tr th {
+        @apply whitespace-nowrap bg-neutral-200 px-4 py-4 text-left text-sm font-medium first:rounded-tl-xl last:rounded-tr-xl;
+    }
+    .table tbody tr td {
+        @apply whitespace-nowrap bg-white px-4 py-3 text-sm;
+    }
+
+    /* TABLE - CUSTOM SIZE */
+    .table-lg tbody tr td {
+        @apply py-4;
+    }
+
+    /* TABLE - CUSTOM COLOR */
+    .table-green tbody tr {
+        @apply odd:bg-success-100;
+    }
+
+    .table-green thead tr th {
+        @apply bg-white;
+    }
+}
+@layer components {
+    /* ALERT */
+    .alert {
+        @apply flex items-center gap-4 rounded-lg px-3 py-2;
+    }
+
+    .alert-light {
+        @apply bg-neutral-100;
+    }
+
+    .alert-success {
+        @apply bg-success-100;
+    }
+
+    .alert-danger {
+        @apply bg-danger-100;
+    }
+
+    /* BUTTON */
+    .button {
+        @apply animate flex items-center justify-center px-6 text-sm font-medium;
+    }
+
+    .button-primary {
+        @apply animate bg-primary text-white hover:bg-primary/90;
+    }
+
+    .button-light {
+        @apply animate bg-neutral-100 hover:bg-neutral-50;
+    }
+
+    .button-outline-primary {
+        @apply rounded-full border border-primary text-primary hover:bg-primary hover:text-white;
+    }
+
+    .button-outline-light {
+        @apply rounded-full border border-neutral-200 text-neutral-700 hover:bg-neutral-100 hover:text-neutral-700;
+    }
+
+}
+@layer utilities {
+    /* ANIMATION */
+    .animate {
+        @apply transition-all duration-300 ease-in-out;
+    }
+
+    /* CUSTOM FONTS */
+    .inter {
+        font-family: "Inter", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+    }
+
+    .material-symbols-fill {
+        font-variation-settings:
+            "FILL" 1,
+            "wght" 400,
+            "GRAD" 0,
+            "opsz" 24;
+    }
+
+    /* CUSTOM SCROLL */
+    ::-webkit-scrollbar {
+        @apply h-[2px] w-[4px] bg-neutral-200;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        @apply rounded-full bg-primary;
+    }
+
+    /* CUSTOM SIDEBAR SCROLL */
+    .scrollSidebar::-webkit-scrollbar {
+        @apply bg-[#333];
+    }
+
+    .scrollSidebar::-webkit-scrollbar-thumb {
+        @apply rounded-full bg-neutral-500;
+    }
+
+    /* NO SCROLL */
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* CUSTOM BACKDROP */
+    [modal-backdrop],
+    [drawer-backdrop] {
+        @apply bg-neutral-950/80;
+    }
+
+    [drawer-backdrop] {
+        @apply z-50;
+    }
+
+    .datepicker {
+        @apply !z-[61];
+    }
+}
+
+
+
+#messageInput:focus {
+    outline: none;
+    border-color: #a3e635; 
+    box-shadow: 0 0 0 2px rgba(163, 230, 53, 0.2); 
+}
+
+    .bounce-dot {
+        animation: bounce-dots 1.4s infinite ease-in-out both;
+    }
+
+    .bounce-dot:nth-child(1) {
+        animation-delay: -0.32s;
+    }
+
+    .bounce-dot:nth-child(2) {
+        animation-delay: -0.16s;
+    }
+
+    .bounce-dot:nth-child(3) {
+        animation-delay: 0s;
+    }
+
+    .message-enter {
+        animation: messageSlideIn 0.3s ease-out;
+    }
+
+    .chat-open {
+        animation: chatOpen 0.5s ease-out;
+    }
+
+
+    @media (max-width: 600px) {
+        #chatModal {
+            position: fixed !important;
+            bottom: 120px !important;
+            right: 1rem !important;
+            left: 1rem !important;
+            width: auto !important;
+            max-width: calc(100vw - 2rem) !important;
+        }
+
+    }
+
+    @keyframes bounce-dots {
+
+        0%,
+        80%,
+        100% {
+            transform: scale(0);
+        }
+
+        40% {
+            transform: scale(1);
+        }
+    }
+
+    @keyframes messageSlideIn {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes chatOpen {
+        from {
+            opacity: 0;
+            transform: translateY(20px) scale(0.95);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+    }

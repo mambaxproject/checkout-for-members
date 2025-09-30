@@ -1,0 +1,92 @@
+
+/* login */
+
+main.auth section.login div.image {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    text-align: center;
+
+    padding: 4rem;
+
+    color: var(--color-white);
+}
+
+main.auth section.login div.image h1 {
+    font-weight: 700;
+    font-size: 4rem;
+
+    margin-bottom: 1.71rem;
+}
+
+main.auth section.login div.image p {
+    color: var(--color-white-64);
+
+    margin-bottom: 3rem;
+}
+
+main.auth section.login div.image .btn {
+    padding: 1rem 2rem;
+}
+
+main.auth section.login div.content {
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 4rem 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+main.auth section.login div.content div.form {
+    max-width: 32rem;
+}
+
+main.auth section.login div.content div.form div.logo {
+    /* margin-bottom: 8rem; */
+
+    position: absolute;
+    top: 3rem;
+    left: 50%;
+
+    transform: translateX(-50%);
+}
+
+main.auth section.login div.content div.form div.logo img {
+    max-width: 56%;
+    height: 3.56rem;
+
+    display: block;
+
+    margin: auto;
+}
+
+main.auth section.login div.content div.form h4 {
+    font-weight: 700;
+    font-size: 2.28rem;
+
+    margin-bottom: 2rem;
+
+    text-align: center;
+}
+
+main.auth section.login div.content div.form .btn {
+    padding: 1rem 3rem;
+
+    font-size: 1.14rem;
+
+    box-shadow: var(--shadow-primary-large);
+}
+
+main.auth section.login div.content div.form p {
+    color: var(--color-dark-64);
+}

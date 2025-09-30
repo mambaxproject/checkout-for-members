@@ -1,0 +1,1858 @@
+/* header */
+
+body:has(> main.website) header {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    background: hsla(0, 0%, 100%, 0.032);
+    backdrop-filter: blur(0.85rem);
+
+    box-shadow: var(--shadow-medium);
+
+    z-index: 8888;
+}
+
+body:has(> main.website) header div.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 2rem 0;
+}
+
+body:has(> main.website) header div.content nav {
+    width: 100%;
+}
+
+body:has(> main.website) header div.content a.logo img {
+    height: 2.56rem;
+}
+
+body:has(> main.website) header div.content nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+body:has(> main.website) header div.content nav ul li {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+body:has(> main.website) header div.content nav ul li a {
+    padding: 0.71rem 1.71rem;
+
+    color: var(--color-white);
+
+    white-space: nowrap;
+    font-size: 1.14rem;
+}
+
+body:has(> main.website) header div.content nav ul li a > i {
+    color: var(--color-secondary);
+}
+
+body:has(> main.website) header div.content nav ul li > ul {
+    position: absolute;
+    top: 140%;
+    left: 0;
+
+    align-items: flex-start;
+
+    min-width: 16rem;
+
+    padding: 0.56rem 0;
+
+    flex-direction: column;
+
+    background: #ffffff;
+    border-top: 0.28rem solid var(--color-primary);
+
+    box-shadow: 0 0.14rem 0.32rem rgb(0 47 102 / 10%);
+    border-radius: 0.32rem;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.4s;
+}
+
+body:has(> main.website) header div.content nav ul li:hover > ul {
+    top: 100%;
+
+    opacity: 1;
+    visibility: visible;
+}
+
+body:has(> main.website) header div.content nav ul li > ul li {
+    width: 100%;
+
+    margin: 0;
+}
+
+body:has(> main.website) header div.content nav ul li > ul li a {
+    text-align: left;
+
+    width: 100%;
+
+    justify-content: flex-start;
+}
+
+body:has(> main.website) header button.menu {
+    display: none;
+}
+
+/* /header */
+
+/* footer */
+
+body:has(> main.website) footer {
+    background: var(--color-dark);
+
+    padding: 4rem 0 0;
+
+    position: relative;
+}
+
+body:has(> main.website) footer div.logo {
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+
+    border-bottom: 1px solid var(--color-white-08);
+}
+
+body:has(> main.website) footer div.logo img {
+    height: 3rem;
+}
+
+body:has(> main.website) footer h6 {
+    font-size: 1rem;
+    text-transform: uppercase;
+
+    color: var(--color-white);
+
+    margin-bottom: 1.56rem;
+}
+
+body:has(> main.website) footer ul li {
+    margin-bottom: 0.56rem;
+}
+
+body:has(> main.website) footer ul li a {
+    color: var(--color-white-64);
+}
+
+body:has(> main.website) footer div.menu div.content {
+    padding-top: 2rem;
+    margin-top: 2rem;
+
+    border-top: 1px solid var(--color-white-08);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body:has(> main.website) footer div.menu div.content nav ul {
+    display: flex;
+}
+
+body:has(> main.website) footer div.menu div.content nav ul li {
+    margin-right: 1.85rem;
+}
+
+body:has(> main.website) footer div.menu div.content ul.social {
+    display: flex;
+}
+
+body:has(> main.website) footer div.menu div.content ul.social li {
+    margin-left: 1.56rem;
+}
+
+body:has(> main.website) footer div.menu div.content ul.social li a {
+    font-size: 1.56rem;
+}
+
+body:has(> main.website) footer div.copyright {
+    color: var(--color-white-48);
+
+    padding: 1.56rem 0 2.28rem;
+
+    font-size: 0.85rem;
+}
+
+/* /footer */
+
+/* default */
+
+div.title h2 {
+    font-size: 2.28rem;
+}
+
+/* /default */
+
+/* initial */
+
+section.initial {
+    padding: 8rem 0 2rem;
+
+    display: flex;
+    align-items: center;
+
+    min-height: 100vh;
+
+    background: linear-gradient(
+            0deg,
+            var(--color-dark-16),
+            var(--color-dark-64)
+        ),
+        var(--color-primary-16) url("../img/website/img-1.png") no-repeat center
+            bottom/cover;
+}
+
+section.initial h1 {
+    color: var(--color-white);
+
+    font-size: 9rem;
+    font-weight: 600;
+
+    background-image: linear-gradient(
+        45deg,
+        var(--color-white),
+        var(--color-white),
+        var(--color-white)
+    );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    padding-bottom: 4rem;
+
+    filter: drop-shadow(0 0 0.85rem var(--color-white-24))
+        drop-shadow(0 0 8rem var(--color-dark));
+}
+
+section.initial div.search {
+    background: linear-gradient(45deg, var(--color-white), var(--color-white));
+    backdrop-filter: blur(0.85rem);
+
+    box-shadow: var(--shadow-large);
+
+    padding: 2.56rem;
+
+    border-radius: 1rem;
+}
+
+section.initial div.search input.form-control {
+    font-size: 1.28rem;
+
+    padding: 1rem 1.56rem;
+}
+
+section.initial div.search button.btn {
+    font-size: 1.28rem;
+
+    padding: 1rem 1.85rem;
+}
+
+section.initial div.items {
+    padding-top: 4rem;
+}
+
+section.initial div.items div.item {
+    background: var(--color-white-08);
+    backdrop-filter: blur(0.85rem);
+
+    box-shadow: var(--shadow-medium);
+
+    padding: 2.56rem;
+
+    border-radius: 1rem;
+
+    display: flex;
+}
+
+section.initial div.items div.item i {
+    color: var(--color-white);
+
+    font-size: 3rem;
+
+    margin-right: 2rem;
+    margin-top: -0.28rem;
+    color: var(--color-white);
+
+    background-image: linear-gradient(
+        45deg,
+        var(--color-secondary),
+        var(--color-primary)
+    );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+section.initial div.items div.item h4 {
+    color: var(--color-white);
+
+    font-size: 1.14rem;
+
+    margin: 0;
+}
+
+/* / initial */
+
+/* spotlight products */
+
+section.spotlight-products {
+    padding: 3rem 0;
+}
+
+section.spotlight-products .item {
+    display: flex;
+    flex-direction: column;
+}
+
+section.spotlight-products .item div.image {
+    margin-bottom: 0;
+
+    border-radius: 0.56rem;
+}
+
+section.spotlight-products .item div.content {
+    padding: 1.28rem 1.28rem 0;
+}
+
+section.spotlight-products .item div.content h6 {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+section.spotlight-products .item div.content h4 {
+    font-weight: 700;
+    font-size: 1.28rem;
+
+    color: var(--color-dark);
+
+    margin-bottom: 0;
+}
+
+section.spotlight-products .item div.content p {
+    font-size: 0.85rem;
+
+    margin-top: 0.56rem;
+    margin-bottom: 0;
+}
+
+section.spotlight-products .item.spotlight div.content {
+    padding: 1.85rem 1.56rem 0;
+}
+
+section.spotlight-products .item.spotlight div.content h6 {
+    font-size: 1.14rem;
+}
+
+section.spotlight-products .item.spotlight div.content h4 {
+    font-size: 1.85rem;
+}
+
+section.spotlight-products .item.spotlight div.content p {
+    font-size: 1.14rem;
+}
+
+/* /spotlight products */
+
+/* carousel category */
+
+section.carousel-category {
+    padding: 3rem 0;
+}
+
+section.carousel-category .item {
+    display: flex;
+    flex-direction: column;
+}
+
+section.carousel-category .item div.image {
+    margin-bottom: 0;
+
+    border-radius: 0.56rem;
+}
+
+section.carousel-category .item div.content {
+    padding: 1.28rem 1.28rem 0;
+}
+
+section.carousel-category .item div.content h6 {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+section.carousel-category .item div.content h4 {
+    font-weight: 700;
+    font-size: 1.28rem;
+
+    color: var(--color-dark);
+
+    margin-bottom: 0;
+}
+
+section.carousel-category .item div.content p {
+    font-size: 0.85rem;
+
+    margin-top: 0.56rem;
+    margin-bottom: 0;
+}
+
+/* /carousel category */
+
+/* carousel cities */
+
+section.carousel-cities {
+    padding: 3rem 0;
+
+    max-width: 100vw;
+    overflow: hidden;
+}
+
+section.carousel-cities .owl-carousel .owl-stage-outer {
+    overflow: visible;
+}
+
+section.carousel-cities .owl-carousel div.owl-item {
+    opacity: 0.32;
+}
+
+section.carousel-cities .owl-carousel div.owl-item.active {
+    opacity: 1;
+}
+
+section.carousel-cities .item {
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: var(--shadow-medium);
+
+    overflow: hidden;
+
+    position: relative;
+
+    border-radius: 1rem;
+}
+
+section.carousel-cities .item div.content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    padding: 1.56rem 1.56rem 1.28rem 1.56rem;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+
+    background: linear-gradient(0deg, var(--color-dark), transparent);
+}
+
+section.carousel-cities .item div.content h4 {
+    color: var(--color-white);
+
+    margin: 0;
+}
+
+/* /carousel cities */
+
+/* carousel spotlight event */
+
+section.carousel-spotlight-event {
+    padding: 4rem 0;
+
+    max-width: 100vw;
+    overflow: hidden;
+
+    background: linear-gradient(
+            0deg,
+            var(--color-dark-64),
+            var(--color-dark-64)
+        ),
+        var(--color-primary-16) url("../img/website/img-1.png") no-repeat center
+            bottom/cover;
+}
+
+section.carousel-spotlight-event div.title h2 {
+    color: var(--color-white);
+
+    font-size: 3rem;
+}
+
+section.carousel-spotlight-event .owl-carousel .owl-stage-outer {
+    overflow: visible;
+}
+
+section.carousel-spotlight-event .owl-carousel div.owl-item {
+    opacity: 0.32;
+}
+
+section.carousel-spotlight-event .owl-carousel div.owl-item.active {
+    opacity: 1;
+}
+
+section.carousel-spotlight-event .item {
+    display: flex;
+
+    /* overflow: hidden; */
+
+    border-radius: 2rem;
+
+    box-shadow: var(--shadow-medium);
+
+    background: var(--color-white);
+}
+
+section.carousel-spotlight-event .item:hover {
+    opacity: 1;
+}
+
+section.carousel-spotlight-event .item div.image {
+    margin-bottom: 0;
+
+    width: 100%;
+    max-width: 60%;
+
+    border-radius: 1.71rem 0 0 1.71rem;
+}
+
+section.carousel-spotlight-event .item div.content {
+    padding: 3rem 3rem 0;
+}
+
+section.carousel-spotlight-event .item div.content h6 {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+section.carousel-spotlight-event .item div.content h4 {
+    font-weight: 700;
+    font-size: 2.28rem;
+
+    color: var(--color-dark);
+
+    margin-bottom: 0;
+}
+
+section.carousel-spotlight-event .item div.content p {
+    font-size: 1rem;
+
+    margin-top: 1.56rem;
+    margin-bottom: 0;
+}
+
+/* /carousel spotlight event */
+
+section.carousel-categories-list {
+    padding: 4rem 0 1rem;
+}
+
+section.carousel-categories-list .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+}
+
+section.carousel-categories-list .item div.image {
+    width: 100%;
+
+    padding-top: 100%;
+    margin-bottom: 1rem;
+
+    border-radius: 100%;
+}
+
+/* carousel items */
+
+section.carousel-items {
+    padding: 3rem 0;
+}
+
+section.carousel-items .item {
+    display: flex;
+    flex-direction: column;
+}
+
+section.carousel-items .item div.image {
+    margin-bottom: 0;
+
+    border-radius: 0.56rem;
+}
+
+section.carousel-items .item div.content {
+    padding: 1.28rem 1.28rem 0;
+}
+
+section.carousel-items .item div.content h6 {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+section.carousel-items .item div.content h4 {
+    font-weight: 700;
+    font-size: 1.28rem;
+
+    color: var(--color-dark);
+
+    margin-bottom: 0;
+}
+
+section.carousel-items .item div.content p {
+    font-size: 0.85rem;
+
+    margin-top: 0.56rem;
+    margin-bottom: 0;
+}
+
+/* /carousel items */
+
+/* initial category */
+
+section.initial-category {
+    padding: 16rem 0 2rem;
+
+    display: flex;
+    align-items: center;
+
+    background: linear-gradient(
+            0deg,
+            var(--color-dark-16),
+            var(--color-dark-64)
+        ),
+        var(--color-primary-16) url("../img/website/img-1.png") no-repeat center
+            bottom/cover;
+}
+
+section.initial-category h1 {
+    color: var(--color-white);
+
+    font-weight: 700;
+    font-size: 3.56rem;
+
+    margin-bottom: 1rem;
+}
+
+section.initial-category p {
+    color: var(--color-white-85);
+
+    font-size: 1rem;
+}
+
+/* /initial category */
+
+/* initial event */
+
+body:has(> main.website > section.initial-event) header {
+    background: var(--color-dark-64);
+}
+
+section.initial-event {
+    background: linear-gradient(
+            0deg,
+            var(--color-dark-16),
+            var(--color-dark-64)
+        ),
+        var(--color-primary-16) url("../img/website/img-1.png") no-repeat center
+            bottom/cover;
+
+    margin-top: -2rem;
+}
+
+section.initial-event div.blur {
+    padding: 0;
+
+    backdrop-filter: blur(1rem);
+}
+
+section.initial-event div.image {
+    padding-top: 50%;
+
+    border-radius: 2rem;
+
+    position: relative;
+
+    box-shadow: var(--shadow-medium);
+
+    bottom: -14rem;
+}
+
+/* /initial event */
+
+/* carousel items */
+
+body:has(> main.website > section.initial-event) section.event {
+    padding-top: 16rem;
+}
+
+body:has(> main.website > section.initial-event) section.event ul.infos li {
+    display: flex;
+
+    margin-bottom: 0.56rem;
+}
+
+body:has(> main.website > section.initial-event) section.event ul.infos li i {
+    bottom: -0.28rem;
+
+    color: var(--color-primary);
+
+    position: relative;
+}
+
+body:has(> main.website > section.initial-event)
+    section.event
+    ul.infos
+    li
+    span {
+    font-size: 1.14rem;
+    font-weight: 600;
+
+    display: block;
+}
+
+body:has(> main.website > section.initial-event)
+    section.event
+    div.buy
+    div.header {
+    display: flex;
+
+    margin-bottom: 1rem;
+}
+
+body:has(> main.website > section.initial-event)
+    section.event
+    div.buy
+    div.header
+    i {
+    margin-right: 1rem;
+
+    font-size: 2rem;
+
+    color: var(--color-primary-85);
+}
+
+body:has(> main.website > section.initial-event)
+    section.event
+    div.buy
+    div.header
+    span.portion {
+    font-weight: 600;
+    font-size: 0.85rem;
+
+    margin-top: 0.28rem;
+
+    display: block;
+
+    color: var(--color-primary);
+}
+
+body:has(> main.website > section.initial-event) section.event div.buy .btn {
+    text-transform: uppercase;
+
+    font-weight: 600;
+    font-size: 1.28rem;
+
+    width: 100%;
+}
+
+body:has(> main.website > section.initial-event) section.event div.description {
+    padding-top: 2rem;
+    padding-bottom: 6rem;
+
+    border-top: 1px solid var(--color-dark-16);
+
+    transition: 0.4s;
+
+    position: relative;
+}
+
+body:has(> main.website > section.initial-event)
+    section.event
+    div.description
+    div.title
+    h4 {
+    font-weight: 700;
+}
+
+body:has(> main.website > section.initial-event)
+    section.event
+    div.description
+    ul
+    li {
+    margin-bottom: 0.56rem;
+}
+
+body:has(> main.website > section.initial-event)
+    section.event
+    div.description
+    div.toggler {
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.14rem;
+
+    cursor: pointer;
+
+    padding: 3rem 0 2rem;
+
+    color: var(--color-dark-64);
+
+    background: linear-gradient(
+        0deg,
+        var(--color-white),
+        var(--color-white-72),
+        transparent
+    );
+}
+
+body:has(> main.website > section.initial-event)
+    section.event
+    div.description.closed
+    div.toggler
+    i {
+    transform: rotateZ(180deg);
+}
+
+/* /carousel items */
+
+/* event date */
+body:has(> main.website > section.initial-event) section.event-date {
+    background: linear-gradient(
+            0deg,
+            var(--color-dark-16),
+            var(--color-dark-64)
+        ),
+        var(--color-primary-16) url("../img/website/img-1.png") no-repeat center
+            bottom/cover;
+}
+
+body:has(> main.website > section.initial-event) section.event-date div.blur {
+    padding: 4rem 0;
+
+    backdrop-filter: blur(1rem);
+}
+
+body:has(> main.website > section.initial-event)
+    section.event-date
+    div.title
+    h4 {
+    color: var(--color-white);
+
+    font-weight: 700;
+    font-size: 2rem;
+
+    margin: 0;
+}
+
+body:has(> main.website > section.initial-event)
+    section.event-date
+    div.title
+    h5 {
+    color: var(--color-white);
+
+    font-weight: 700;
+    font-size: 1.42rem;
+
+    margin: 0;
+}
+
+body:has(> main.website > section.initial-event)
+    section.event-date
+    div.carousel-date {
+    background: var(--color-white);
+
+    border-radius: 0.71rem;
+
+    margin-bottom: 2.56rem;
+
+    display: flex;
+}
+
+body:has(> main.website > section.initial-event)
+    section.event-date
+    div.carousel-date
+    button.left {
+    border-radius: 0.71rem 0 0 0.71rem;
+}
+
+body:has(> main.website > section.initial-event)
+    section.event-date
+    div.carousel-date
+    button.left {
+    border-radius: 0 0.71rem 0.71rem 0;
+}
+
+body:has(> main.website > section.initial-event)
+    section.event-date
+    div.carousel-date
+    button.left,
+body:has(> main.website > section.initial-event)
+    section.event-date
+    div.carousel-date
+    button.right {
+    width: 2rem;
+    min-width: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1rem;
+
+    color: var(--color-primary);
+}
+
+body:has(> main.website > section.initial-event)
+    section.event-date
+    div.carousel-date
+    div.owl-carousel {
+    max-width: calc(100% - 4rem);
+}
+
+body:has(> main.website > section.initial-event)
+    section.event-date
+    div.carousel-date
+    div.owl-carousel
+    .owl-stage-outer {
+    padding: 1rem 0;
+    margin: -1rem 0;
+}
+
+body:has(> main.website > section.initial-event)
+    section.event-date
+    div.carousel-date
+    div.owl-carousel
+    div.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    transition: 0.2s;
+
+    cursor: pointer;
+
+    padding: 1rem;
+}
+
+body:has(> main.website > section.initial-event)
+    section.event-date
+    div.carousel-date
+    div.owl-carousel
+    div.item
+    span {
+    font-weight: 500;
+}
+
+body:has(> main.website > section.initial-event)
+    section.event-date
+    div.carousel-date
+    div.owl-carousel
+    div.item
+    span.date {
+    font-size: 2rem;
+    font-weight: 700;
+
+    line-height: 1.1;
+
+    margin-top: 0.14rem;
+
+    display: block;
+}
+
+body:has(> main.website > section.initial-event)
+    section.event-date
+    div.carousel-date
+    div.owl-carousel
+    div.item
+    span.hour {
+    font-size: 1.28rem;
+    font-weight: 700;
+}
+
+body:has(> main.website > section.initial-event)
+    section.event-date
+    div.carousel-date
+    div.owl-carousel
+    div.item:hover {
+    color: var(--color-primary);
+}
+
+body:has(> main.website > section.initial-event)
+    section.event-date
+    div.carousel-date
+    div.owl-carousel
+    div.item.active {
+    background: var(--color-primary);
+    color: var(--color-white);
+
+    position: relative;
+}
+
+body:has(> main.website > section.initial-event)
+    section.event-date
+    div.carousel-date
+    div.owl-carousel
+    div.item.active::after {
+    content: "";
+
+    width: 1.71rem;
+    height: 1.71rem;
+
+    background: var(--color-primary);
+
+    border-radius: 0.28rem;
+
+    position: absolute;
+    bottom: -0.71rem;
+    left: 50%;
+    transform: translateX(-50%) rotateZ(45deg);
+}
+
+body:has(> main.website > section.initial-event)
+    section.event-date
+    div.seats-map {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+body:has(> main.website > section.initial-event)
+    section.event-date
+    div.seats-map
+    ul.labels {
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 1.56rem;
+}
+
+body:has(> main.website > section.initial-event)
+    section.event-date
+    div.seats-map
+    ul.labels
+    li {
+    margin: 0 1rem;
+
+    display: flex;
+    align-items: center;
+}
+
+body:has(> main.website > section.initial-event)
+    section.event-date
+    div.seats-map
+    ul.labels
+    li
+    span.color {
+    width: 1rem;
+    min-width: 1rem;
+    height: 1rem;
+
+    border-radius: 1rem;
+
+    background: var(--color-white-16);
+
+    display: flex;
+
+    margin-right: 0.56rem;
+
+    margin-bottom: -0.14rem;
+}
+
+body:has(> main.website > section.initial-event)
+    section.event-date
+    div.seats-map
+    ul.labels
+    li
+    span.value {
+    color: var(--color-white);
+}
+
+body:has(> main.website > section.initial-event)
+    section.event-date
+    div.seats-map
+    ul.map {
+    position: relative;
+}
+
+body:has(> main.website > section.initial-event)
+    section.event-date
+    div.seats-map
+    ul.map
+    li:not(.base) {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+body:has(> main.website > section.initial-event)
+    section.event-date
+    div.seats-map
+    ul.map
+    li.hover,
+body:has(> main.website > section.initial-event)
+    section.event-date
+    div.seats-map
+    ul.map
+    li.active {
+    z-index: 88;
+}
+
+body:has(> main.website > section.initial-event)
+    section.event-date
+    div.seats-map
+    ul.map
+    li
+    table
+    tr
+    td
+    span {
+    opacity: 0.24;
+
+    background: var(--color-white-08);
+}
+
+body:has(> main.website > section.initial-event)
+    section.event-date
+    div.seats-map
+    ul.map:has(> .hover)
+    li:not(.base).active
+    table
+    tr
+    td
+    span {
+    opacity: 0.24;
+}
+
+body:has(> main.website > section.initial-event)
+    section.event-date
+    div.seats-map
+    ul.map
+    li:not(.base).active
+    table
+    tr
+    td
+    span,
+body:has(> main.website > section.initial-event)
+    section.event-date
+    div.seats-map
+    ul.map
+    li:not(.base).hover
+    table
+    tr
+    td
+    span,
+body:has(> main.website > section.initial-event)
+    section.event-date
+    div.seats-map
+    ul.map
+    li:not(.base).active.hover
+    table
+    tr
+    td
+    span {
+    opacity: 1;
+}
+
+body:has(> main.website > section.initial-event)
+    section.event-date
+    div.seats-map
+    ul.map
+    li:not(.base)
+    table
+    tr
+    td
+    span {
+    opacity: 0.24;
+
+    background: var(--color-dark-04);
+
+    border-radius: 0.42rem;
+}
+
+body:has(> main.website > section.initial-event)
+    section.event-date
+    div.seats-map
+    ul.labels
+    li:nth-child(1)
+    span.color {
+    background: var(--color-white-48);
+}
+
+body:has(> main.website > section.initial-event)
+    section.event-date
+    div.seats-map
+    ul.map
+    li:not(.base):nth-child(3)
+    table
+    tr
+    td
+    span:has(> ion-icon),
+body:has(> main.website > section.initial-event)
+    section.event-date
+    div.seats-map
+    ul.labels
+    li:nth-child(2)
+    span.color {
+    background: var(--color-primary);
+}
+
+body:has(> main.website > section.initial-event)
+    section.event-date
+    div.seats-map
+    ul.map
+    li:not(.base):nth-child(4)
+    table
+    tr
+    td
+    span:has(> ion-icon),
+body:has(> main.website > section.initial-event)
+    section.event-date
+    div.seats-map
+    ul.labels
+    li:nth-child(3)
+    span.color {
+    background: var(--color-red);
+}
+
+body:has(> main.website > section.initial-event)
+    section.event-date
+    div.seats-map
+    ul.map
+    li:not(.base):nth-child(5)
+    table
+    tr
+    td
+    span:has(> ion-icon),
+body:has(> main.website > section.initial-event)
+    section.event-date
+    div.seats-map
+    ul.labels
+    li:nth-child(4)
+    span.color {
+    background: var(--color-orange);
+}
+
+body:has(> main.website > section.initial-event)
+    section.event-date
+    div.seats-map
+    ul.map
+    li:not(.base):nth-child(6)
+    table
+    tr
+    td
+    span:has(> ion-icon),
+body:has(> main.website > section.initial-event)
+    section.event-date
+    div.seats-map
+    ul.labels
+    li:nth-child(5)
+    span.color {
+    background: var(--color-purple);
+}
+
+body:has(> main.website > section.initial-event)
+    section.event-date
+    div.seats-map
+    ul.map
+    li:not(.base):nth-child(7)
+    table
+    tr
+    td
+    span:has(> ion-icon),
+body:has(> main.website > section.initial-event)
+    section.event-date
+    div.seats-map
+    ul.labels
+    li:nth-child(6)
+    span.color {
+    background: var(--color-yellow);
+}
+
+body:has(> main.website > section.initial-event)
+    section.event-date
+    div.seats-map
+    ul.map
+    li:not(.base):nth-child(8)
+    table
+    tr
+    td
+    span:has(> ion-icon),
+body:has(> main.website > section.initial-event)
+    section.event-date
+    div.seats-map
+    ul.labels
+    li:nth-child(7)
+    span.color {
+    background: var(--color-green);
+}
+
+body:has(> main.website > section.initial-event)
+    section.event-date
+    div.seats-map
+    ul.map
+    li
+    table
+    tr
+    td
+    span {
+    padding: 0;
+    margin: 2px;
+
+    width: 2rem;
+    height: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.28rem;
+}
+
+body:has(> main.website > section.initial-event)
+    section.event-date
+    div.seats-map
+    ul.map
+    li
+    table
+    tr
+    td
+    span:has(> ion-icon) {
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+body:has(> main.website > section.initial-event)
+    section.event-date
+    div.seats-map
+    ul.map
+    li
+    table
+    tr
+    td
+    span:has(> ion-icon):hover {
+    opacity: 0.64 !important;
+}
+
+body:has(> main.website > section.initial-event)
+    section.event-date
+    div.seats-map
+    ul.map
+    li
+    table
+    tr
+    td
+    span.stage {
+    background: var(--color-white);
+}
+
+body:has(> main.website > section.initial-event)
+    section.event-date
+    ul.sectors
+    li {
+    padding: 1.56rem 1.71rem;
+    margin-bottom: 1rem;
+
+    background: var(--color-white-08);
+
+    border-radius: 0.71rem;
+
+    display: flex;
+    flex-direction: column;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+body:has(> main.website > section.initial-event)
+    section.event-date
+    ul.sectors
+    li
+    h6 {
+    font-weight: 700;
+    font-size: 1.14rem;
+
+    margin-bottom: 0.28rem;
+
+    color: var(--color-white-85);
+}
+
+body:has(> main.website > section.initial-event)
+    section.event-date
+    ul.sectors
+    li
+    span {
+    display: block;
+
+    margin-bottom: 0.28rem;
+
+    color: var(--color-white-85);
+}
+
+body:has(> main.website > section.initial-event)
+    section.event-date
+    ul.sectors
+    li
+    small {
+    display: block;
+
+    font-weight: 700;
+
+    color: var(--color-white-85);
+}
+
+body:has(> main.website > section.initial-event)
+    section.event-date
+    ul.sectors
+    li:hover {
+    background: var(--color-white-16);
+}
+
+body:has(> main.website > section.initial-event)
+    section.event-date
+    ul.sectors
+    li.active {
+    background: var(--color-white);
+
+    z-index: 88;
+}
+
+body:has(> main.website > section.initial-event)
+    section.event-date
+    ul.sectors
+    li.active
+    h6 {
+    color: var(--color-dark);
+}
+
+body:has(> main.website > section.initial-event)
+    section.event-date
+    ul.sectors
+    li.active
+    span {
+    color: var(--color-dark);
+}
+
+body:has(> main.website > section.initial-event)
+    section.event-date
+    ul.sectors
+    li.active
+    small {
+    color: var(--color-primary);
+}
+
+/* /event date */
+
+/* checkout */
+
+main.checkout {
+    min-height: 100vh;
+}
+
+main.checkout > header {
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+
+    background: var(--color-white-08);
+    backdrop-filter: blur(1rem);
+}
+
+main.checkout > header div.logo img {
+    height: 3rem;
+}
+
+main.checkout section.block {
+    background: var(--color-white);
+
+    margin-bottom: 1.71rem;
+    padding: 2.28rem 2.28rem 1.85rem;
+
+    border-radius: 1rem;
+}
+
+main.checkout section.block > div > div > div.title {
+    display: flex;
+    align-items: center;
+}
+
+main.checkout section.block > div > div > div.title span.number {
+    border: 2px solid var(--color-primary);
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 2.28rem;
+    height: 2.28rem;
+
+    font-weight: 700;
+
+    border-radius: 4rem;
+
+    margin-right: 1rem;
+}
+
+main.checkout section.block > div > div > div.title h2 {
+    font-size: 1.56rem;
+}
+
+main.checkout section.block label {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+main.checkout section.block div.ingressos div.item {
+    padding: 0.56rem 0 2rem;
+
+    border-bottom: 1px solid var(--color-dark-16);
+}
+
+main.checkout section.block div.ingressos div.item h4 {
+    font-size: 1.14rem;
+    font-weight: 700;
+}
+
+main.checkout section.block div.options-pay div.item {
+    padding: 0 0 1.28rem;
+
+    width: 100%;
+    height: 8rem;
+
+    border: 1px solid var(--color-dark-16);
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+
+    text-align: center;
+
+    position: relative;
+
+    border-radius: 0.56rem;
+}
+
+main.checkout section.block div.options-pay div.item span.active {
+    position: absolute;
+    left: 0.85rem;
+    top: 0.56rem;
+
+    color: var(--color-primary);
+
+    font-size: 1.14rem;
+
+    display: none;
+}
+
+main.checkout section.block div.options-pay div.item ion-icon {
+    font-size: 3rem;
+
+    color: var(--color-primary);
+}
+
+main.checkout section.block div.options-pay div.item > span {
+    font-weight: 700;
+    font-size: 0.71rem;
+    text-transform: uppercase;
+
+    display: inline-flex;
+
+    margin-top: 0.56rem;
+}
+
+main.checkout section.block div.options-pay div.item.active {
+    border-color: var(--color-primary);
+}
+
+main.checkout section.block div.options-pay div.item.active span.active {
+    display: inline-flex;
+}
+
+main.checkout section.block div.card-placeholder div.front {
+    width: 100%;
+    height: 13rem;
+
+    border-radius: 1rem;
+
+    position: relative;
+
+    background: var(--color-primary-48);
+}
+
+main.checkout section.block div.card-placeholder div.front div.chip {
+    width: 3rem;
+    height: 2.56rem;
+
+    border-radius: 0.56rem;
+
+    background: #f7cf70;
+
+    position: absolute;
+    left: 1.28rem;
+    top: 1.28rem;
+}
+
+main.checkout section.block div.card-placeholder div.front div.numbers {
+    font-size: 0.71rem;
+
+    position: absolute;
+    top: 50%;
+    left: 1.28rem;
+}
+
+main.checkout
+    section.block
+    div.card-placeholder
+    div.front
+    div.numbers
+    span:nth-child(4),
+main.checkout
+    section.block
+    div.card-placeholder
+    div.front
+    div.numbers
+    span:nth-child(8),
+main.checkout
+    section.block
+    div.card-placeholder
+    div.front
+    div.numbers
+    span:nth-child(12) {
+    margin-right: 0.85rem;
+}
+
+main.checkout section.block div.card-placeholder div.front div.name-date {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1.28rem 1.32rem;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+}
+
+main.checkout
+    section.block
+    div.card-placeholder
+    div.front
+    div.name-date
+    span.name {
+    font-weight: 600;
+}
+
+main.checkout
+    section.block
+    div.card-placeholder
+    div.front
+    div.name-date
+    span.date {
+    display: flex;
+    align-items: center;
+
+    line-height: 1;
+}
+
+main.checkout
+    section.block
+    div.card-placeholder
+    div.front
+    div.name-date
+    span.date
+    span {
+    font-size: 0.71rem;
+
+    margin: 0 0.14rem;
+}
+
+main.checkout
+    section.block
+    div.card-placeholder
+    div.front
+    div.name-date
+    span.date
+    span:nth-child(3) {
+    font-size: 1.28rem;
+
+    display: inline-flex;
+
+    margin: 0 0.28rem;
+}
+
+main.checkout section.block.resumo {
+    background: var(--color-white);
+
+    margin-bottom: 1.71rem;
+    padding: 2rem 2.28rem 1.28rem;
+
+    border-radius: 1rem;
+}
+
+main.checkout section.block.resumo h4 {
+    font-size: 1.56rem;
+    font-weight: 700;
+}
+
+main.checkout section.block.resumo h6 {
+    font-weight: 700;
+    font-size: 1rem;
+
+    margin-bottom: 0.71rem;
+}
+
+main.checkout section.block.resumo ul li {
+    margin-bottom: 0.71rem;
+}
+
+main.checkout section.block.resumo ul li div.label {
+    display: flex;
+    justify-content: space-between;
+
+    font-weight: 600;
+}
+
+main.checkout section.block.resumo ul li div.taxas {
+    font-size: 0.85rem;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+main.checkout section.block.resumo h5 {
+    font-weight: 700;
+    font-size: 1.28rem;
+}
+
+main.checkout section.block.resumo h3 {
+    font-weight: 600;
+    font-size: 1.14rem;
+}
+
+/* pix */
+
+main.checkout.pix > header {
+    margin-bottom: 4rem;
+}
+
+main.checkout.pix h2 {
+    font-size: 4rem;
+    font-weight: 600;
+
+    color: var(--color-white);
+
+    margin-bottom: 5rem;
+}
+
+main.checkout.pix h5 {
+    font-size: 1.56rem;
+    font-weight: 600;
+
+    color: var(--color-white);
+
+    margin-bottom: 2rem;
+}
+
+main.checkout.pix section.block.pix {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main.checkout.pix section.block div.price {
+    font-size: 1.14rem;
+    font-weight: 600;
+
+    margin: 1rem 0 2rem;
+}
+
+main.checkout.pix section.block div.price span {
+    color: var(--color-primary);
+
+    font-weight: 700;
+}
+
+main.checkout.pix ul li {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 1rem;
+
+    font-size: 0.85rem;
+
+    color: var(--color-white);
+}
+
+main.checkout.pix ul li div.number {
+    width: 3.28rem;
+    height: 3.28rem;
+
+    border-radius: 3.28rem;
+
+    border: 1px solid var(--color-white);
+
+    color: var(--color-white);
+
+    font-size: 1.28rem;
+
+    margin-right: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* message */
+
+main.checkout.message div.content {
+    min-height: calc(100vh - 16rem);
+
+    display: flex;
+    align-items: center;
+}
+
+main.checkout.message h2 {
+    font-size: 5rem;
+    font-weight: 600;
+
+    color: var(--color-white);
+
+    margin-bottom: 5rem;
+}

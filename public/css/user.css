@@ -1,0 +1,120 @@
+/* initial */
+
+section.initial-user {
+    padding: 16rem 0 2rem;
+
+    display: flex;
+    align-items: center;
+
+    background: linear-gradient(0deg, var(--color-dark-16), var(--color-dark-64)), var(--color-primary-16) url('../img/website/img-1.png') no-repeat center bottom/cover;
+}
+
+section.initial-user h1 {
+    color: var(--color-white);
+
+    font-weight: 700;
+    font-size: 3.56rem;
+
+    margin-bottom: 1rem;
+}
+
+/* /initial */
+
+/* dashboard user */
+
+section.dashboard-user {
+    padding: 4rem 0;
+}
+
+section.dashboard-user ul.sidebar {
+    /* background: var(--color-dark-08); */
+}
+
+section.dashboard-user ul.sidebar li {
+    margin-bottom: 1rem;
+}
+
+section.dashboard-user ul.sidebar li a {
+    padding: 1.14rem 1.28rem;
+
+    border-radius: var(--border-radius-medium);
+
+    color: var(--color-gray);
+
+    font-weight: 600;
+    font-size: 1.14rem;
+    line-height: 1;
+
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+
+    position: relative;
+
+    transition: .2s;
+}
+
+section.dashboard-user ul.sidebar li a span.icon {
+    margin-right: 1.28rem;
+
+    min-width: 1.56rem;
+
+    display: inline-flex;
+    justify-content: center;
+
+    font-size: 1.28rem;
+}
+
+section.dashboard-user ul.sidebar li a.active {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+section.dashboard-user div.my-account h4 {
+    font-weight: 600;
+}
+
+section.dashboard-user div.my-shopping div.item {
+    transition: .2s;
+}
+
+section.dashboard-user div.my-shopping div.item:hover {
+    transform: scale(1.02);
+
+    box-shadow: var(--shadow-large-light);
+}
+
+section.dashboard-user div.my-shopping div.item div.header {
+    padding: .71rem 1.14rem;
+
+    border-radius: var(--border-radius-medium) var(--border-radius-medium) 0 0;
+
+    background: var(--color-primary);
+    color: var(--color-white);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section.dashboard-user div.my-shopping div.item div.header span:first-child {
+    font-weight: 600;
+}
+
+section.dashboard-user div.my-shopping div.item div.header span:last-child {
+    font-size: .85rem;
+
+    position: relative;
+    bottom: -.07rem;
+}
+
+section.dashboard-user div.my-shopping div.item div.content {
+    padding: 2rem;
+
+    border: 1px solid var(--color-dark-16);
+
+    border-radius: 0 0 var(--border-radius-medium) var(--border-radius-medium);
+}
+
+/* / dashboard user */

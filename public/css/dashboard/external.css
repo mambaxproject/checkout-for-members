@@ -1,0 +1,78 @@
+body.external > main.page {
+	padding: 4rem 0;
+}
+
+body.external main.page div.header {
+	margin-bottom: 2.5rem;
+}
+
+body.external > main.page section.external-block {
+	background: var(--color-dark-08);
+
+	padding: 2rem;
+
+	border-radius: 1.5rem;
+}
+
+body.external > main.page section.external-block div.banner {
+	width: 100%;
+
+	padding-top: 24%;
+	margin-bottom: 2rem;
+
+	border-radius: 1rem;
+
+	background: var(--color-dark-08);
+}
+
+body.external > main.page section.external-block > div.header {
+	display: flex;
+	align-items: center;
+
+	margin-bottom: 2rem;
+}
+
+body.external > main.page section.external-block > div.header > div.image {
+	width: 10rem;
+	min-width: 10rem;
+	height: 10rem;
+
+	border-radius: 1rem;
+
+	margin-right: 1.5rem;
+
+	background: var(--color-dark-08);
+}
+
+body.external > main.page section.external-block > div.header > div.text {
+	display: flex;
+	flex-direction: column;
+}
+
+body.external > main.page section.external-block > div.header > div.text > span.title {
+	font-size: 1.75rem;
+	font-weight: 600;
+
+	display: inline-flex;
+
+	margin-bottom: 0.5rem;
+}
+
+body.external > main.page section.external-block > div.header > div.text > span.price {
+	font-size: 2rem;
+	font-weight: 600;
+}
+
+body.external > main.page section.external-block > div.header > div.text > span.price > span.mult {
+	font-size: 1rem;
+
+	color: var(--color-dark-56);
+}
+
+body.external > main.page section.external-block > div.header > div.text > span.in-cash {
+	font-size: 1rem;
+
+	display: inline-flex;
+
+	margin-top: 0.25rem;
+}
