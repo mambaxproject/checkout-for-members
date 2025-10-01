@@ -50,7 +50,7 @@ class LoginController extends Controller
 
         return match ($role) {
             'Admin' => route('admin.products.index'),
-            default => route('dashboard.home.index'),
+            default => route('dashboard.members.index'),
         };
     }
 
