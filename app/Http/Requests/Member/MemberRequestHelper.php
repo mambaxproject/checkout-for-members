@@ -59,7 +59,7 @@ trait MemberRequestHelper
         }
 
         $pathName = 'uploads/members/' . uniqid() . '.' . $image->getClientOriginalExtension();
-        Storage::disk('s3')->put($pathName, fopen($image->getRealPath(), 'r+'));
+        Storage::disk('s3')->put($pathName, fopen($image->getRealPath(), 'r+'), ['visibility' => 'public']);
         return Storage::disk('s3')->url($pathName);
     }
 }
