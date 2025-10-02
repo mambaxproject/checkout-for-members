@@ -3,6 +3,7 @@
 namespace App\Http\Requests\Member;
 
 use Illuminate\Support\Facades\Storage;
+use Obs\ObsClient;
 
 trait MemberRequestHelper
 {
@@ -32,7 +33,7 @@ trait MemberRequestHelper
         $youtubePattern = '/^(https?:\/\/)?(www\.)?(youtube|youtu|youtube-nocookie)\.(com|be)\/.+$/';
         $vimeoPattern = '/^https?:\/\/(www\.)?vimeo\.com\/\d+(\/[\w-]+)?(\?.*)?$/';
         $pandaPattern = '/^https?:\/\/player-vz-[\w-]+\.tv\.pandavideo\.com\.br\/embed\/\?v=[\w-]{36}$/';
-    
+
         return preg_match($youtubePattern, $url)
             || preg_match($vimeoPattern, $url)
             || preg_match($pandaPattern, $url);
@@ -58,8 +59,31 @@ trait MemberRequestHelper
             return '';
         }
 
+        $bucket   = config('filesystems.disks.s3.bucket');
+        $accessKey = config('filesystems.disks.s3.key');
+        $secretKey = config('filesystems.disks.s3.secret');
+        $endpoint  = config('filesystems.disks.s3.endpoint');
+
         $pathName = 'uploads/members/' . uniqid() . '.' . $image->getClientOriginalExtension();
-        Storage::disk('s3')->put($pathName, fopen($image->getRealPath(), 'r+'), ['visibility' => 'public']);
-        return Storage::disk('s3')->url($pathName);
+
+        $obsClient = new ObsClient([
+            'key' => $accessKey,
+            'secret' => $secretKey,
+            'endpoint' => $endpoint,
+        ]);
+
+        $obsClient->putObject([
+            'Bucket' => $bucket,
+            'Key' => $pathName,
+            'SourceFile' => $image->getRealPath(),
+            'ContentDisposition' => 'inline',
+            'Metadata' => [
+                'Content-Disposition' => 'inline',
+                'ContentDisposition' => 'inline'
+            ],
+        ]);
+        $endpoint = preg_replace('#^https?://#', '', $endpoint);
+
+        return "https://{$bucket}.{$endpoint}/{$pathName}";
     }
 }
